@@ -1,7 +1,6 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import Layout from '@/components/Layout'
+import ProductItem from '@/components/ProductItem'
+import { data } from '@/utils/data'
 
 
 
@@ -9,7 +8,11 @@ import Layout from '@/components/Layout'
 export default function Home() {
   return (
     <Layout title={'sandun'}>
-      homwe
+      
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4'>
+
+        {data.products.map((product,index)=>(<ProductItem key={index} product={product}/>))}
+      </div>
     </Layout>
   )
 }
