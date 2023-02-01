@@ -14,7 +14,7 @@ export default function ProductScreen() {
     const { slug } = query
     const product = data.products.find(item => item.slug === slug)
 
-
+// console.log(slug);
     const addToCartHandler = () => {
 
         const existItem = state.cart.cartItems.find((x) => x.slug === product.slug)
