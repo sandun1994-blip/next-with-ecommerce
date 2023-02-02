@@ -95,7 +95,7 @@ try {
         </div>
         <div className="mb-4 ">
           Don&apos;t have an account? &nbsp;
-          <Link href={`/register?redirect=${1 || '/'}`}>Register</Link>
+          <Link href={`/register?redirect=${1 || '/'}`} className='text-blue-600 hover:text-blue-800'>Register</Link>
         </div>
       </form>
    </Layout>

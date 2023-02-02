@@ -43,11 +43,11 @@ const logoutClickHandler =()=>{
 
                 <header>
                     <nav className='flex h-12  items-center justify-between shadow-md px-4'>
-                        <Link href={'/'} className='text-lg font-bold'>
+                        <Link href={'/'} className='text-lg font-bold text-blue-600 hover:text-blue-800' >
                             DNS
                         </Link>
                         <div>
-                            <Link href={'/cart'} className='p-2'>Cart {cartItemsCount>0 &&(
+                            <Link href={'/cart'} className='p-2 text-blue-600 hover:text-blue-800'>Cart {cartItemsCount>0 &&(
                             <span className='ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white'>
                                 {cartItemsCount}
                             </span>)}</Link>
@@ -59,13 +59,13 @@ const logoutClickHandler =()=>{
                                 </Menu.Button>
                                 <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white  shadow-lg ">
                                   <Menu.Item>
-                                    <Link className="dropdown-link" href="/profile">
+                                    <Link className="dropdown-link text-blue-600 hover:text-blue-800" href="/profile">
                                       Profile
                                     </Link>
                                   </Menu.Item>
                                   <Menu.Item>
                                     <Link
-                                      className="dropdown-link"
+                                      className="dropdown-link text-blue-600 hover:text-blue-800"
                                       href="/order-history"
                                     >
                                       Order History
@@ -74,7 +74,7 @@ const logoutClickHandler =()=>{
                                   {session.user.isAdmin && (
                                     <Menu.Item>
                                       <Link
-                                        className="dropdown-link"
+                                        className="dropdown-link text-blue-600 hover:text-blue-800"
                                         href="/admin/dashboard"
                                       >
                                         Admin Dashboard
@@ -83,7 +83,7 @@ const logoutClickHandler =()=>{
                                   )}
                                   <Menu.Item>
                                     <a
-                                      className="dropdown-link"
+                                      className="dropdown-link text-blue-600 hover:text-blue-800"
                                       href="#"
                                       onClick={logoutClickHandler}
                                     >
@@ -94,7 +94,7 @@ const logoutClickHandler =()=>{
                               </Menu>
                             
                             
-                            :(<Link href={'/login'} className='p-2'>Login</Link>))}
+                            :(<Link href={'/login'} className='p-2 text-blue-600 hover:text-blue-800'>Login</Link>))}
                         </div>
                     </nav>
                 </header>

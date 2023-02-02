@@ -5,10 +5,10 @@ import { createContext, useReducer } from "react";
 export const Store = createContext()
 
 const initialState = {
-    //  cart: { cartItems: [] }
-    cart: Cookies.get('cart') ? JSON.parse(Cookies.get('cart')) : { cartItems: [] }
-}
-
+    cart: Cookies.get('cart')
+      ? JSON.parse(Cookies.get('cart'))
+      : { cartItems: [], shippingAddress: {}, paymentMethod: '' },
+  };
 
 
 function reducer(state, action) {
